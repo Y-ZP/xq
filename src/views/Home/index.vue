@@ -10,46 +10,33 @@
       @change="onChange"
       placeholder
     >
-      <van-tabbar-item icon="home-o" to="/index">首页</van-tabbar-item>
-      <van-tabbar-item icon="apps-o" dot to="/list">分类</van-tabbar-item>
-      <van-tabbar-item icon="cart-o" :badge="badge" to="/cart"
-        >购物车</van-tabbar-item
-      >
-      <van-tabbar-item icon="contact" dot to="/my">我的</van-tabbar-item>
+      <van-tabbar-item icon="home-o" to="/index">主页</van-tabbar-item>
+      <van-tabbar-item icon="apps-o" dot to="/list">校园文化</van-tabbar-item>
+      <van-tabbar-item icon="contact" dot to="/my">登录</van-tabbar-item>
     </van-tabbar>
   </div>
 </template>
 
 <script>
-import { mapGetters } from "vuex";
 export default {
-  name: "Index",
-  data() {
+  name: 'Index',
+  data () {
     return {
       // 当前选中项
       active: 0,
       // 购物车数量
-      badge: this.total,
-    };
+      badge: this.total
+    }
   },
   computed: {
-    ...mapGetters("Cart", ["total"]),
-  },
-  watch: {
-    total: {
-      handler(newVal) {
-        this.badge = newVal;
-      },
-      immediate: true,
-    },
   },
   methods: {
     // 导航栏切换
-    onChange(item) {
-      this.active = item;
-    },
-  },
-};
+    onChange (item) {
+      this.active = item
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

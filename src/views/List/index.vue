@@ -42,9 +42,9 @@
 </template>
 
 <script>
-import { List } from "../../utils/Sql/List";
+import { List } from '../../utils/Sql/List'
 export default {
-  data() {
+  data () {
     return {
       // 默认选中第一项
       activeKey: 0,
@@ -53,23 +53,23 @@ export default {
       // 分类数据列表
       List: [],
       // 二级分类列表
-      list2: [],
-    };
+      list2: []
+    }
   },
-  created() {
-    this.height = document.documentElement.clientHeight;
-    this.list = List.data;
-    this.list2 = List.data[0].children;
+  created () {
+    this.height = document.documentElement.clientHeight
+    this.list = List.data
+    this.list2 = List.data[0].children
   },
   methods: {
     // 左边分类栏
-    onChange(index) {
-      this.activeKey = index;
+    onChange (index) {
+      this.activeKey = index
       // 为二级分类列表重新赋值
-      this.list2 = this.list[index].children;
-    },
-  },
-};
+      this.list2 = this.list[index].children
+    }
+  }
+}
 </script>
 
 <style lang='scss' scoped>

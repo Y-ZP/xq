@@ -41,11 +41,9 @@
 <van-divider content-position="left">提示<van-icon @click="change(1)" name="eye-o" /></van-divider>
 <div class="tishi">
   <h5>注意：</h5>
-  <p>账号格式为6位数任意字符</p>
-  <p>密码格式为6位数字</p>
-  <p>本平台提供一键登录，因此只需注册完账号返回登录页登录即可</p>
-  <p>本平台一切数据均是储存在本地，如果反复注册则会覆盖当前账号密码，如忘记账号密码，重新注册新账号登录即可</p>
-  <p>~~~</p>
+  <p>请输入正确的账号密码</p>
+  <p>密码为身份证后六位</p>
+
 </div>
 </div>
 </template>
